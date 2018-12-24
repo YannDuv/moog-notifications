@@ -1,0 +1,14 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended"],
+  "linterOptions": {
+    "exclude": ["node_modules/**"]
+  },
+  "jsRules": {
+    "quotemark": [true, "single", "avoid-escape"]
+  },
+  "rules": {
+    "quotemark": [true, "single", "avoid-escape"],
+    "newline-per-chained-call": true
+  }
+}
