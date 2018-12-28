@@ -31,7 +31,7 @@ export default class Notification {
 
   constructor(json: IJsonType) {
     this.id = json.invite_id;
-    this.message = json.invite;
+    this.message = decodeURI(json.invite.replace('\\n', '<br>'));
     this.vector = json.vector;
     this.status = json.status;
     this.date = new Date(json.invite_time);

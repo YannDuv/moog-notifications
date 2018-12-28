@@ -8,7 +8,7 @@ describe('Moogsoft notifications', () => {
 
   it('Should display the a list of notifications', () => {
     cy.visit('/');
-    cy.get('ol > li')
+    cy.get('ol')
       .children()
       .should('have.length', 15);
   });
@@ -18,14 +18,14 @@ describe('Moogsoft notifications', () => {
 
     cy.wait(11000);
 
-    cy.get('ol > li')
+    cy.get('ol')
       .children()
       .should('have.length', 5);
   });
 
   it('Should be possible to filter read notifications', () => {
     cy.visit('/');
-    cy.get('ol > li')
+    cy.get('ol')
       .children()
       .should('have.length', 3);
   });

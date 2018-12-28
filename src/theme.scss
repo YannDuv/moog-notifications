@@ -1,1 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 $primary: #2faf16;
+$background: #FCFCFC;
+$dark: rgba($color: #000000, $alpha: .6);
+
+body {
+  white-space: pre-line;
+  font-family: 'Montserrat', sans-serif;
+  color: $dark;
+}

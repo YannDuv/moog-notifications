@@ -1,7 +1,6 @@
 {
-  "eslint.enable": false,
   "tslint.autoFixOnSave": true,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "tslint.jsEnable": true,
   "tslint.packageManager": "yarn"
 }

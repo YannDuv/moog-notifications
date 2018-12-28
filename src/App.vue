@@ -1,7 +1,4 @@
 <style lang="scss">
-#app p {
-  color: $primary;
-}
 </style>
 
 <template>
