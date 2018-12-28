@@ -1,2 +1,9 @@
+# Javascript
 node_modules/
 public/bundle.js
+
+# Log
+*.log
+
+# Mac
+.DS_Store

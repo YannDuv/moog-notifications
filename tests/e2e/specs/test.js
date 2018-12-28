@@ -13,14 +13,14 @@ describe('Moogsoft notifications', () => {
       .should('have.length', 15);
   });
 
-  it('Notifications should be updated after 10s', () => {
+  it('Notifications should be updated after 11s', () => {
     cy.visit('/');
 
-    cy.wait(10500);
+    cy.wait(11000);
 
     cy.get('ol > li')
       .children()
-      .should('have.length');
+      .should('have.length', 5);
   });
 
   it('Should be possible to filter read notifications', () => {

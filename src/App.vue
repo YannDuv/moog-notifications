@@ -1,21 +1,28 @@
+<style lang="scss">
+#app p {
+  color: $primary;
+}
+</style>
+
 <template>
   <div id="app">
     <h1>Moogsoft - Notifications</h1>
-    <p>Bonjour !</p>
+    <notification/>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import VueRx from "vue-rx";
+import { NotificationComponent } from "./notification";
+
+Vue.use(VueRx);
 
 export default Vue.extend({
-  name: "app"
+  name: "app",
+  components: {
+    notification: NotificationComponent
+  }
 });
 </script>
 
-<style lang="scss">
-$primary: #2faf16;
-#app p {
-  color: $primary;
-}
-</style>
