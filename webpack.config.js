@@ -10,7 +10,7 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   entry: './src/main.ts',
-  mode: 'development',
+  mode: 'production',
   module: {
     rules: [
       { test: /\.vue$/, loader: 'vue-loader' },
@@ -27,8 +27,8 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true,
               data: '@import "./src/theme.scss";',
+              sourceMap: true,
             },
           },
         ],

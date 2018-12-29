@@ -7,6 +7,7 @@
   "private": true,
   "scripts": {
     "start": "node_modules/.bin/webpack-dev-server --open \"Google Chrome\" --config webpack.config.js",
+    "build": "export NODE_ENV=production && node_modules/.bin/webpack --config webpack.config.js",
     "test:tu": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' node_modules/.bin/ava-ts",
     "test:tu:watch": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' node_modules/.bin/ava --watch",
     "test:e2e": "node_modules/.bin/cypress open"
