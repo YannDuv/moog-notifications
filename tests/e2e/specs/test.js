@@ -25,6 +25,9 @@ describe('Moogsoft notifications', () => {
 
   it('Should be possible to filter read notifications', () => {
     cy.visit('/');
+
+    cy.get('#filterUnread').click();
+
     cy.get('ol')
       .children()
       .should('have.length', 3);

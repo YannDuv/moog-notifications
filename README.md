@@ -23,6 +23,11 @@ Upon submitting the code we’ll be looking at the overall result of your work, 
 - Coding patterns and best practices
 - Technologies used
 
+## ✨ Inspirations
+
+- [Vue.js with TypeScript](https://johnpapa.net/vue-typescript/)
+- [The joy of building Vue apps in Typescript ](https://medium.com/coding-blocks/the-joy-of-building-vue-apps-in-typescript-part-1-vue-class-components-8291bb6213d8)
+
 ## 🚧 Project setup
 
 ```

@@ -4,9 +4,12 @@ li {
   flex-direction: row;
   align-items: flex-start;
   flex: 1;
-  padding: 0 2rem;
-  margin: 1rem 0;
+  padding: 1rem 2rem;
   border-bottom: solid 1px #979797;
+
+  &.is-read {
+    background-color: #00000012;
+  }
 
   &:last-of-type {
     border-bottom: none;
@@ -18,24 +21,27 @@ li {
 
     p {
       margin-top: 0;
+    }
 
-      .name {
-        text-transform: capitalize;
-      }
+    em.name {
+      text-transform: capitalize;
     }
   }
 }
 </style>
 
 <template>
-  <li>
+  <li :class="{'is-read': !notification.isRead}">
     <div class="date">
-      <b>{{notification.date.toLocaleString()}}</b>
+      <b>{{notification.localeDate}}</b>
     </div>
     <div class="content">
       <p v-html="notification.message"></p>
-      <p>from <em class="name">{{notification.user.name}}</em> by <em>{{notification.vector}}</em>
-      </p>
+      <span>
+        from
+        <em class="name">{{notification.user.name}}</em> by
+        <em>{{notification.vector}}</em>
+      </span>
     </div>
   </li>
 </template>

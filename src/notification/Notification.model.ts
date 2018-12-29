@@ -6,7 +6,7 @@ enum VectorType {
   TWITTER = 'Twitter',
 }
 
-enum StatusType {
+export enum StatusType {
   READ = 'read',
   UNREAD = 'unread',
 }
@@ -34,11 +34,15 @@ export default class Notification {
     this.message = decodeURI(json.invite.replace('\\n', '<br>'));
     this.vector = json.vector;
     this.status = json.status;
-    this.date = new Date(json.invite_time);
+    this.date = new Date(json.invite_time * 1000);
     this.user = UserService.findUserByNameOrPushNewOne(json.sender_id);
   }
 
   get isRead() {
     return this.status === StatusType.READ;
+  }
+
+  get localeDate() {
+    return this.date.toLocaleString('fr');
   }
 }
