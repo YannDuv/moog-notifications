@@ -49,7 +49,7 @@ yarn start
 ### 🎁 Compiles and minifies for production
 
 ```
-todo
+yarn build
 ```
 
 ### ✅ Run your tests
