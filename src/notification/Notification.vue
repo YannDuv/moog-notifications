@@ -11,15 +11,40 @@ ol {
   overflow: scroll;
   margin: 0;
   box-shadow: inset 0px 2px 3px -2px $dark;
+  position: relative;
+}
+
+.list-enter-active {
+  transition: all 600ms;
+}
+.list-leave-active {
+  transition: all 400ms;
+}
+.list-enter,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+.list-leave-active {
+  position: absolute;
+}
+.item {
+  transition-delay: 500ms;
+  transition: all 400ms;
 }
 </style>
 
 <template>
   <div class="container">
     <notification-header @toggle-filter="toggleFilter" :isUnreadFiltered="isUnreadFiltered"/>
-    <ol>
-      <notification-row v-for="value in notifications" :key="value.id" :notification="value"/>
-    </ol>
+    <transition-group name="list" tag="ol">
+      <notification-row
+        v-for="value in notifications"
+        :key="value.id"
+        :notification="value"
+        class="item"
+      />
+    </transition-group>
   </div>
 </template>
 

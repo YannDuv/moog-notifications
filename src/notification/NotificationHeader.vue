@@ -6,6 +6,7 @@
   border-bottom: solid 1px $dark;
   padding: 1rem 2rem;
   align-items: center;
+  background-color: $background;
 
   button {
     color: white;

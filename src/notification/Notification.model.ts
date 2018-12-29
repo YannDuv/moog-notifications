@@ -43,6 +43,6 @@ export default class Notification {
   }
 
   get localeDate() {
-    return this.date.toLocaleString('fr');
+    return this.date.toLocaleString();
   }
 }

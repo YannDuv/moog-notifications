@@ -7,8 +7,8 @@ li {
   padding: 1rem 2rem;
   border-bottom: solid 1px #979797;
 
-  &.is-read {
-    background-color: #00000012;
+  &.unread {
+    background-color: #d6d6d6;
   }
 
   &:last-of-type {
@@ -31,7 +31,7 @@ li {
 </style>
 
 <template>
-  <li :class="{'is-read': !notification.isRead}">
+  <li :class="[notification.isRead ? 'is-read' : 'unread']">
     <div class="date">
       <b>{{notification.localeDate}}</b>
     </div>
